@@ -1,7 +1,7 @@
 <h1>
     Followings
 </h1>
-<% @user.following_relationships.each do |id| %>
-<%= link_to gravatar_for(id.followed, size: 50), id.followed %>
-<%= id.followed.name %><br>
+<% @user.following_relationships.each do |r| %>
+<%= link_to gravatar_for(r.followed, size: 50), r.followed %>
+<%= r.followed.name %><br>
 <% end %>

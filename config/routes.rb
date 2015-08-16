@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  get '/users/:id/followings' => 'users#followings'
+  get '/users/:id/following' => 'users#followings'
   get '/users/:id/followeds' => 'users#followers'
 
   resources :users
