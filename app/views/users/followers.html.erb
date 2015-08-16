@@ -3,6 +3,6 @@
 </h1>
 <% @user.follower_relationships.each do |r| %>
 <%= link_to gravatar_for(r.follower, size: 50), r.follower %>
-<%= r.follower.name %><br>
+<%= r.follower.name %></br></br></br></br>
 <% end %>
 
