@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :followers, :followings, :show]
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts
@@ -19,10 +20,11 @@ class UsersController < ApplicationController
   end
   
   def followings
-    
+    @followings = Relationship.where(following: params[:id])
   end
   
   def followers
+     @followings = Relationship.where(follower: params[:id])
   end
   
   def edit 
