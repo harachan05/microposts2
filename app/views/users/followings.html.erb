@@ -3,5 +3,5 @@
 </h1>
 <% @user.following_relationships.each do |r| %>
 <%= link_to gravatar_for(r.followed, size: 50), r.followed %>
-<%= r.followed.name %><br>
+<%= r.followed.name %></br></br></br></br>
 <% end %>
