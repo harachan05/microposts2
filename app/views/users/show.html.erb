@@ -6,6 +6,10 @@
         <%= @user.name %>
         <%= link_to "edit", edit_user_path %>
       </h1>
+      <h2>
+        <%= link_to "Followings", followings_user_path(@user) %>
+        <%= link_to "Followers", followers_user_path(@user) %>
+      </h2>
     </section>
   </aside>
   <div class="col-md-8">
